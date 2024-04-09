@@ -26,7 +26,7 @@ def get_embedding(sentence: str) -> np.ndarray:
 def run_example():
     sentence = 'Here is an example sentence'
     embedding = get_embedding(sentence=sentence)
-    print('EMBEDDING')
+    print('EMBEDDING: ')
     print(embedding)
 
 
