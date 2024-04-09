@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  llama:
+    image: llama_model
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5000:8000"
+    volumes:
+      - /Users/andrea/Desktop/PhD/Projects/Current/political_ads/llama_model:/var/model
+    environment:
+      - USE_MLOCK=0
+      - MODEL=/var/model/llama-2-7b.Q4_K_M.gguf
+    cap_add:
+      - SYS_RESOURCE
